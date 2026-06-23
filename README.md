@@ -120,4 +120,72 @@ Setelah pengguna memasukkan `0`, program akan berhenti.
 * **Kondisi penghentian (sentinel value)** : angka `0` digunakan sebagai tanda untuk mengakhiri perulangan.
 
 
+# Penjelasan Program
+
+Program ini menggunakan perulangan **for** untuk menampilkan seluruh huruf alfabet kecil dari **a** hingga **z**.
+
+## Alur Program
+
+1. Program mendeklarasikan variabel `c` bertipe `char` dengan nilai awal `'a'`.
+2. Perulangan `for` dijalankan selama nilai `c` masih kurang dari atau sama dengan `'z'`.
+3. Pada setiap iterasi:
+
+   * Karakter yang tersimpan dalam `c` ditampilkan menggunakan `cout`.
+   * Nilai `c` bertambah satu karakter (`c++`).
+4. Setelah mencapai huruf `'z'`, kondisi perulangan menjadi salah (`false`) dan perulangan berhenti.
+5. Program mencetak baris baru menggunakan `cout << endl;`.
+
+## Struktur Perulangan
+
+```cpp
+for (char c = 'a'; c <= 'z'; c++) {
+    cout << c;
+}
+```
+
+Penjelasan bagian-bagiannya:
+
+* `char c = 'a'` → nilai awal perulangan dimulai dari huruf `a`.
+* `c <= 'z'` → perulangan berjalan sampai huruf `z`.
+* `c++` → berpindah ke karakter berikutnya pada setiap iterasi.
+
+## Contoh Output
+
+```text
+abcdefghijklmnopqrstuvwxyz
+```
+
+## Mengapa `c++` Bisa Berpindah ke Huruf Berikutnya?
+
+Tipe data `char` sebenarnya menyimpan nilai berdasarkan kode karakter (ASCII). Misalnya:
+
+| Karakter | Kode ASCII |
+| -------- | ---------- |
+| a        | 97         |
+| b        | 98         |
+| c        | 99         |
+| ...      | ...        |
+| z        | 122        |
+
+Ketika `c++` dijalankan, nilai ASCII karakter bertambah 1 sehingga berpindah ke huruf berikutnya.
+
+## Kode yang Dikomentari
+
+Pada bagian atas terdapat kode yang dikomentari:
+
+```cpp
+// for (int j = 0; j < 5; j++) {
+//     cout << "For loop iteration: " << j << endl;
+// }
+```
+
+Jika komentar dihapus, program akan menampilkan teks sebanyak 5 kali dengan nilai `j` dari 0 hingga 4.
+
+## Konsep yang Digunakan
+
+* `#include <iostream>` : digunakan untuk operasi input dan output.
+* `using namespace std;` : agar dapat menggunakan `cout` dan `endl` tanpa menuliskan `std::`.
+* `for` : perulangan yang digunakan ketika jumlah iterasi sudah diketahui.
+* `char` : tipe data untuk menyimpan satu karakter.
+* `ASCII` : sistem pengkodean karakter yang memungkinkan karakter diurutkan dan diiterasi menggunakan operator `++`.
 
