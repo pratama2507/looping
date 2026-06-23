@@ -61,3 +61,63 @@ Ketika pengguna memasukkan `2`, program akan keluar dari perulangan dan berakhir
 
 
 
+# Penjelasan Program
+
+Program ini menggunakan perulangan **while** untuk meminta pengguna memasukkan angka secara berulang hingga pengguna memasukkan angka **0**.
+
+## Alur Program
+
+1. Program mendeklarasikan variabel `angka` dan menginisialisasinya dengan nilai `-1`.
+2. Kondisi pada perulangan `while` diperiksa:
+
+   ```cpp
+   while (angka != 0)
+   ```
+3. Selama nilai `angka` tidak sama dengan `0`, program akan:
+
+   * Menampilkan pesan:
+
+     ```
+     Masukkan angka (0 untuk berhenti):
+     ```
+   * Menerima input dari pengguna menggunakan `cin`.
+4. Setelah pengguna memasukkan nilai:
+
+   * Jika nilai yang dimasukkan **bukan 0**, perulangan akan terus berjalan.
+   * Jika nilai yang dimasukkan **0**, kondisi `while` menjadi salah (`false`) dan program berhenti.
+
+## Cara Kerja Perulangan
+
+```cpp
+int angka = -1;
+
+while (angka != 0) {
+    cout << "Masukkan angka (0 untuk berhenti): ";
+    cin >> angka;
+}
+```
+
+Nilai awal `angka` diatur menjadi `-1` agar kondisi `angka != 0` bernilai benar saat pertama kali diperiksa, sehingga perulangan dapat dimulai.
+
+## Contoh Output
+
+```text
+Masukkan angka (0 untuk berhenti): 5
+Masukkan angka (0 untuk berhenti): 10
+Masukkan angka (0 untuk berhenti): 3
+Masukkan angka (0 untuk berhenti): 0
+```
+
+Setelah pengguna memasukkan `0`, program akan berhenti.
+
+## Konsep yang Digunakan
+
+* `#include <iostream>` : digunakan untuk operasi input dan output.
+* `using namespace std;` : agar dapat menggunakan `cout` dan `cin` tanpa menuliskan `std::`.
+* `while` : perulangan yang akan terus berjalan selama kondisi bernilai `true`.
+* `cin` : menerima input dari pengguna.
+* `cout` : menampilkan output ke layar.
+* **Kondisi penghentian (sentinel value)** : angka `0` digunakan sebagai tanda untuk mengakhiri perulangan.
+
+
+
